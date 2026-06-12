@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forró Barra Grande Maraú – Forró na Península</title>
+<meta name="description" content="Forró em Barra Grande, Maraú, Bahia. Eventos, festas, aulas e lugares para dançar na Península de Maraú.">
+<meta name="keywords" content="forró Barra Grande, forró Maraú, forró Península Maraú, aulas de forró Bahia, eventos forró Barra Grande, dançar forró Bahia, forró pé de serra Maraú">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Forró Barra Grande Maraú">
+<link rel="canonical" href="https://forrobarragrande.com.br/">
+
+<!-- Open Graph / WhatsApp / Redes sociais -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://forrobarragrande.com.br/">
+<meta property="og:title" content="Forró Barra Grande Maraú – Forró na Península">
+<meta property="og:description" content="Tudo sobre forró na Península de Maraú – eventos, aulas e os melhores lugares para dançar na Bahia.">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Forró Barra Grande Maraú">
+<meta name="twitter:description" content="Eventos, aulas e lugares para dançar forró em Barra Grande, Maraú – Bahia.">
+
+<!-- Schema.org: Local Business + Website -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Forró Barra Grande Maraú",
+  "url": "https://forrobarragrande.com.br",
+  "description": "Guia de forró na Península de Maraú, Bahia – eventos, lugares e aulas",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://forrobarragrande.com.br/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Forró Barra Grande Maraú",
+  "description": "Guia de eventos, aulas e lugares de forró na Península de Maraú",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Barra Grande",
+    "addressRegion": "BA",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -13.9667,
+    "longitude": -38.9833
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== NAVEGAÇÃO ========== -->
+<nav role="navigation" aria-label="Navegação principal">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Forró <span>Barra Grande</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#eventos">Eventos</a>
+      <a href="#lugares">Lugares</a>
+      <a href="#aulas">Aulas</a>
+      <a href="#sobre">Contato</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </div>
+</nav>
+
+<!-- ========== BANNER DO ADMINISTRADOR ========== -->
+<!--
+  💡 DICA: Para esconder este aviso do público, apague o bloco abaixo.
+-->
+<div class="admin-banner">
+  <p>✏️ <strong>Administrador:</strong> edite eventos, lugares e aulas diretamente na
+    <a href="https://docs.google.com/spreadsheets/d/1r60kq1x-0XrZJ5QNyVq-xDqfnaiQlwYkjbTTvh1ZBic/edit" target="_blank" rel="noopener">
+      planilha do Google Sheets
+    </a> — sem mexer no código!
+  </p>
+</div>
+
+<!-- ========== HERO ========== -->
+<header class="hero" role="banner">
+  <div class="hero-inner">
+    <div class="hero-tag">🎵 Forró na Península de Maraú</div>
+    <h1>O Forró mais <em>bonito</em><br>do litoral baiano</h1>
+    <p>Eventos, aulas e os melhores lugares para dançar forró em Barra Grande e na Península de Maraú, Bahia.</p>
+    <div class="hero-btns">
+      <a href="#eventos" class="btn-primary">Ver próximos eventos</a>
+      <a href="#aulas" class="btn-outline">Quero aprender forró</a>
+    </div>
+  </div>
+</header>
+
+<!-- ========== EVENTOS ========== -->
+<section id="eventos" aria-labelledby="h-eventos">
+  <div class="container">
+    <header class="section-header">
+      <span class="section-tag">📅 Agenda</span>
+      <h2 id="h-eventos">Próximos Eventos</h2>
+      <p>Festas, noites de forró e encontros na região de Barra Grande</p>
+    </header>
+    <div class="eventos-grid" id="eventosGrid">
+      <p class="status-msg">Carregando eventos…</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== LUGARES ========== -->
+<section id="lugares" aria-labelledby="h-lugares">
+  <div class="container">
+    <header class="section-header">
+      <span class="section-tag">🏖️ Onde dançar</span>
+      <h2 id="h-lugares">Lugares para Dançar</h2>
+      <p>Bares, espaços e pistas onde o forró rola em Barra Grande e arredores</p>
+    </header>
+    <div class="lugares-grid" id="lugaresGrid">
+      <p class="status-msg">Carregando lugares…</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== AULAS ========== -->
+<section id="aulas" aria-labelledby="h-aulas">
+  <div class="container">
+    <header class="section-header">
+      <span class="section-tag">💃 Aprenda</span>
+      <h2 id="h-aulas">Aulas de Forró</h2>
+      <p>Para iniciantes ou quem quer aperfeiçoar o passo — tem aula pra todo nível</p>
+    </header>
+    <div class="aulas-grid" id="aulasGrid">
+      <p class="status-msg">Carregando aulas…</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTATO ========== -->
+<section id="sobre" aria-labelledby="h-sobre">
+  <div class="container">
+    <header class="section-header">
+      <span class="section-tag">📍 Contato</span>
+      <h2 id="h-sobre">Forró Barra Grande Maraú</h2>
+      <p>Reunindo quem ama forró na Península de Maraú. Quer divulgar seu evento ou aula? Entre em contato!</p>
+    </header>
+    <div class="contato-grid">
+      <div class="contato-item">
+        <h4>WhatsApp</h4>
+        <!-- EDITE: troque pelo seu número -->
+        <p><a href="https://wa.me/5573999999999" target="_blank" rel="noopener">(73) 9 9999-9999</a></p>
+      </div>
+      <div class="contato-item">
+        <h4>Instagram</h4>
+        <!-- EDITE: troque pelo seu @ -->
+        <p><a href="https://instagram.com/forrobarragrande" target="_blank" rel="noopener">@forrobarragrande</a></p>
+      </div>
+      <div class="contato-item">
+        <h4>Localização</h4>
+        <p>Barra Grande, Maraú – BA</p>
+      </div>
+      <div class="contato-item">
+        <h4>E-mail</h4>
+        <!-- EDITE: troque pelo seu e-mail -->
+        <p><a href="mailto:contato@forrobarragrande.com.br">contato@forrobarragrande.com.br</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <p>© 2025 <strong>Forró Barra Grande Maraú</strong> · Feito com amor na Bahia 🌴</p>
+  <p style="margin-top:0.4rem">
+    <a href="#eventos">Eventos</a> ·
+    <a href="#lugares">Lugares</a> ·
+    <a href="#aulas">Aulas</a> ·
+    <a href="#sobre">Contato</a>
+  </p>
+</footer>
+
+<!-- ================================================================
+     JAVASCRIPT — Integração com Google Sheets + Dados de exemplo
+     
+     COMO CONFIGURAR:
+     1. Crie a planilha (veja instruções no README)
+     2. Publique a planilha: Arquivo → Publicar na web
+     3. Copie o ID da planilha da URL e cole em SHEET_ID abaixo
+     4. Mude useSheets para true
+================================================================ -->
+<script>
+  // ============================================================
+  // CONFIGURAÇÃO — edite apenas estas duas linhas
+  // ============================================================
+  const SHEET_ID  = '1r60kq1x-0XrZJ5QNyVq-xDqfnaiQlwYkjbTTvh1ZBic';
+  const useSheets = true;
+  // ============================================================
+
+  // Dados de exemplo usados enquanto a planilha não está configurada
+  // Estes dados também servem de referência para o formato das abas
+  const dadosExemplo = {
+    eventos: [
+      { dia:'19', mesano:'Jul 2025', nome:'Forró Pé de Serra na Praia',  local:'Bar do Zé – Barra Grande',        tipo:'forro',    instagram:'https://instagram.com/bardoze',         maps:'https://maps.app.goo.gl/exemplo1' },
+      { dia:'26', mesano:'Jul 2025', nome:'Noite de Xote & Baião',       local:'Pousada Maresia – Barra Grande',  tipo:'xote',     instagram:'https://instagram.com/maresia',         maps:'' },
+      { dia:'02', mesano:'Ago 2025', nome:'Arraiá do Fim de Semana',     local:'Praça Central – Barra Grande',    tipo:'especial', instagram:'',                                     maps:'https://maps.app.goo.gl/exemplo3' },
+      { dia:'09', mesano:'Ago 2025', nome:'Forró ao Pôr do Sol',         local:'Quiosque da Lagoa – Maraú',       tipo:'forro',    instagram:'https://instagram.com/quiosquelagoa',   maps:'https://maps.app.goo.gl/exemplo4' },
+      { dia:'16', mesano:'Ago 2025', nome:'Encontro dos Forrozeiros',    local:'Casa de Shows Maraú',             tipo:'especial', instagram:'https://instagram.com/casashowsmarau',  maps:'' },
+      { dia:'23', mesano:'Ago 2025', nome:'Sexta de Forró Livre',        local:'Bar do Zé – Barra Grande',        tipo:'forro',    instagram:'https://instagram.com/bardoze',         maps:'https://maps.app.goo.gl/exemplo1' },
+    ],
+    lugares: [
+      { icone:'🍺', nome:'Bar do Zé',           bairro:'Centro – Barra Grande', desc:'O point histórico do forró em Barra Grande. Toda sexta e sábado tem música ao vivo com a melhor vista para o mar.',        estilo:'Forró pé de serra',   instagram:'https://instagram.com/bardoze',        maps:'https://maps.app.goo.gl/exemplo1' },
+      { icone:'🌅', nome:'Quiosque da Lagoa',   bairro:'Lagoa – Maraú',         desc:'Ambiente aberto à beira da lagoa. Forró nas noites de lua cheia com mesas na areia e petiscos regionais.',                  estilo:'Forró romântico',     instagram:'https://instagram.com/quiosquelagoa',  maps:'https://maps.app.goo.gl/exemplo4' },
+      { icone:'🎶', nome:'Casa de Shows Maraú', bairro:'Maraú Centro',          desc:'Palco coberto com pista de dança de qualidade. Recebe bandas regionais e nacionais durante a alta temporada.',              estilo:'Forró universitário', instagram:'https://instagram.com/casashowsmarau', maps:'https://maps.app.goo.gl/exemplo5' },
+      { icone:'🌴', nome:'Pousada Maresia',     bairro:'Barra Grande',          desc:'Terças e quintas tem forró no jardim da pousada. Ambiente intimista, ideal para casais e turistas que chegam de passagem.', estilo:'Xote & baião',        instagram:'https://instagram.com/maresia',        maps:'https://maps.app.goo.gl/exemplo6' },
+    ],
+    aulas: [
+      { nivel:'iniciante',     nome:'Forró do Zero',    professor:'Prof. Cláudio Lima',   horario:'Ter e Qui · 18h',        local:'Espaço Cultural Maraú', preco:'R$ 80/mês',   whatsapp:'5573991110001' },
+      { nivel:'intermediario', nome:'Técnica e Giro',   professor:'Profa. Ana Cardoso',   horario:'Seg e Qua · 19h30',      local:'Estúdio Barra Grande',  preco:'R$ 100/mês',  whatsapp:'5573991110002' },
+      { nivel:'todos',         nome:'Forró na Praia',   professor:'Grupo Pé de Serra BG', horario:'Sáb · 8h (ao ar livre)', local:'Praia de Barra Grande', preco:'Gratuito 🎉', whatsapp:'5573991110003' },
+      { nivel:'avancado',      nome:'Forró Estilizado', professor:'Prof. Marcos Vieira',  horario:'Sex · 20h',              local:'Casa de Shows Maraú',   preco:'R$ 120/mês',  whatsapp:'5573991110004' },
+    ]
+  };
+
+  // ---------- Renderização ----------
+
+  // helper: ícones SVG inline
+  const svgIG   = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>';
+  const svgMaps = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>';
+  const svgWA   = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.134.558 4.137 1.535 5.874L.057 23.272a.75.75 0 0 0 .92.92l5.4-1.478A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.95 9.95 0 0 1-5.073-1.38l-.363-.215-3.763 1.029 1.03-3.762-.234-.375A9.95 9.95 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>';
+
+  function linksHtml(ig, maps) {
+    if (!ig && !maps) return '';
+    return `<div class="card-links">
+      ${ig    ? `<a class="card-link link-ig"    href="${ig}"    target="_blank" rel="noopener" aria-label="Instagram">${svgIG}</a>` : ''}
+      ${maps  ? `<a class="card-link link-maps"  href="${maps}"  target="_blank" rel="noopener" aria-label="Ver no mapa">${svgMaps}</a>` : ''}
+    </div>`;
+  }
+
+  function renderEventos(lista) {
+    const grid = document.getElementById('eventosGrid');
+    const tipoClasse = { forro:'tipo-forro', xote:'tipo-xote', especial:'tipo-especial' };
+    const tipoLabel  = { forro:'Forró Pé de Serra', xote:'Xote & Baião', especial:'Evento Especial' };
+    grid.innerHTML = lista.map(e => `
+      <article class="evento-card" itemscope itemtype="https://schema.org/Event">
+        <div class="evento-data">
+          <div class="evento-dia" itemprop="startDate">${e.dia}</div>
+          <div class="evento-mesano">${e.mesano}</div>
+        </div>
+        <div class="evento-body">
+          <h3 itemprop="name">${e.nome}</h3>
+          <p class="evento-local" itemprop="location">${e.local}</p>
+          <div class="card-footer">
+            <span class="evento-tipo ${tipoClasse[e.tipo] || 'tipo-forro'}">${tipoLabel[e.tipo] || e.tipo}</span>
+            ${linksHtml(e.instagram, e.maps)}
+          </div>
+        </div>
+      </article>`).join('');
+  }
+
+  function renderLugares(lista) {
+    const grid = document.getElementById('lugaresGrid');
+    grid.innerHTML = lista.map(l => `
+      <article class="lugar-card" itemscope itemtype="https://schema.org/LocalBusiness">
+        <div class="lugar-header">
+          <div class="lugar-icon" aria-hidden="true">${l.icone}</div>
+          <div>
+            <h3 itemprop="name">${l.nome}</h3>
+            <p itemprop="address">${l.bairro}</p>
+          </div>
+        </div>
+        <p class="lugar-desc" itemprop="description">${l.desc}</p>
+        <div class="card-footer">
+          <span class="lugar-badge">${l.estilo}</span>
+          ${linksHtml(l.instagram, l.maps)}
+        </div>
+      </article>`).join('');
+  }
+
+  function renderAulas(lista) {
+    const grid = document.getElementById('aulasGrid');
+    const nClasse = { iniciante:'nivel-iniciante', intermediario:'nivel-intermediario', avancado:'nivel-avancado', todos:'nivel-todos' };
+    const nLabel  = { iniciante:'Iniciante', intermediario:'Intermediário', avancado:'Avançado', todos:'Todos os níveis' };
+    grid.innerHTML = lista.map(a => `
+      <article class="aula-card">
+        <span class="aula-nivel ${nClasse[a.nivel] || 'nivel-todos'}">${nLabel[a.nivel] || a.nivel}</span>
+        <h3>${a.nome}</h3>
+        <div class="aula-info">
+          <span>👤 ${a.professor}</span>
+          <span>🕐 ${a.horario}</span>
+          <span>📍 ${a.local}</span>
+        </div>
+        <div class="card-footer aula-footer">
+          <p class="aula-preco">${a.preco}</p>
+          ${a.whatsapp ? `<a class="card-link link-wa" href="https://wa.me/${a.whatsapp}?text=Olá! Vi o site Forró Barra Grande e tenho interesse na aula ${encodeURIComponent(a.nome)}" target="_blank" rel="noopener" aria-label="WhatsApp">${svgWA} Falar</a>` : ''}
+        </div>
+      </article>`).join('');
+  }
+
+  // ---------- Carregamento do Google Sheets ----------
+
+  async function carregarDoSheets() {
+    const base = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=`;
+    try {
+      const [resEv, resLu, resAu] = await Promise.all([
+        fetch(base + 'Eventos'),
+        fetch(base + 'Lugares'),
+        fetch(base + 'Aulas')
+      ]);
+
+      const parseSheet = async (res) => {
+        const text = await res.text();
+        const match = text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\)/);
+        if (!match) throw new Error('Formato inesperado');
+        const json = JSON.parse(match[1]);
+        return json.table.rows.map(row => row.c.map(c => (c && c.v != null) ? String(c.v).trim() : ''));
+      };
+
+      const evRows = await parseSheet(resEv);
+      renderEventos(evRows.filter(r => r[2]).map(r => ({
+        dia: String(parseFloat(r[0]) || r[0]).replace('.0',''), mesano: r[1], nome: r[2], local: r[3], tipo: r[4],
+        instagram: r[5] || '', maps: r[6] || ''
+      })));
+
+      const luRows = await parseSheet(resLu);
+      renderLugares(luRows.slice(1).filter(r => r[1]).map(r => ({
+        icone: r[0], nome: r[1], bairro: r[2], desc: r[3], estilo: r[4],
+        instagram: r[5] || '', maps: r[6] || ''
+      })));
+
+      const auRows = await parseSheet(resAu);
+      renderAulas(auRows.filter(r => r[1]).map(r => ({
+        nivel: r[0], nome: r[1], professor: r[2], horario: r[3], local: r[4],
+        preco: r[5], whatsapp: r[6] || ''
+      })));
+
+    } catch (err) {
+      console.warn('Google Sheets indisponível — usando dados de exemplo.', err);
+      usarDadosExemplo();
+    }
+  }
+
+  function usarDadosExemplo() {
+    renderEventos(dadosExemplo.eventos);
+    renderLugares(dadosExemplo.lugares);
+    renderAulas(dadosExemplo.aulas);
+  }
+
+  // Carrega ao iniciar
+  if (useSheets && SHEET_ID !== 'SUA_PLANILHA_ID_AQUI') {
+    carregarDoSheets();
+  } else {
+    usarDadosExemplo();
+  }
+
+  // ---------- Menu mobile ----------
+  const toggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const aberto = navLinks.classList.toggle('aberto');
+    toggle.setAttribute('aria-expanded', aberto);
+    toggle.textContent = aberto ? '✕' : '☰';
+  });
+  // Fechar menu ao clicar em link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('aberto');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.textContent = '☰';
+    });
+  });
+</script>
+
+</body>
+</html>
