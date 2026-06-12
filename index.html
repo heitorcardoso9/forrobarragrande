@@ -224,10 +224,10 @@
       { icone:'🌴', nome:'Pousada Maresia',     bairro:'Barra Grande',          desc:'Terças e quintas tem forró no jardim da pousada. Ambiente intimista, ideal para casais e turistas que chegam de passagem.', estilo:'Xote & baião',        instagram:'https://instagram.com/maresia',        maps:'https://maps.app.goo.gl/exemplo6' },
     ],
     aulas: [
-      { nivel:'iniciante',     nome:'Forró do Zero',    professor:'Prof. Cláudio Lima',   horario:'Ter e Qui · 18h',        local:'Espaço Cultural Maraú', preco:'R$ 80/mês',   whatsapp:'5573991110001' },
-      { nivel:'intermediario', nome:'Técnica e Giro',   professor:'Profa. Ana Cardoso',   horario:'Seg e Qua · 19h30',      local:'Estúdio Barra Grande',  preco:'R$ 100/mês',  whatsapp:'5573991110002' },
-      { nivel:'todos',         nome:'Forró na Praia',   professor:'Grupo Pé de Serra BG', horario:'Sáb · 8h (ao ar livre)', local:'Praia de Barra Grande', preco:'Gratuito 🎉', whatsapp:'5573991110003' },
-      { nivel:'avancado',      nome:'Forró Estilizado', professor:'Prof. Marcos Vieira',  horario:'Sex · 20h',              local:'Casa de Shows Maraú',   preco:'R$ 120/mês',  whatsapp:'5573991110004' },
+      { nivel:'iniciante',     nome:'Forró do Zero',    professor:'Prof. Cláudio Lima',   horario:'Ter e Qui · 18h',        local:'Espaço Cultural Maraú', preco:'R$ 80/mês',   whatsapp:'5573991110001', maps:'https://maps.app.goo.gl/exemplo1' },
+      { nivel:'intermediario', nome:'Técnica e Giro',   professor:'Profa. Ana Cardoso',   horario:'Seg e Qua · 19h30',      local:'Estúdio Barra Grande',  preco:'R$ 100/mês',  whatsapp:'5573991110002', maps:'https://maps.app.goo.gl/exemplo2' },
+      { nivel:'todos',         nome:'Forró na Praia',   professor:'Grupo Pé de Serra BG', horario:'Sáb · 8h (ao ar livre)', local:'Praia de Barra Grande', preco:'Gratuito 🎉', whatsapp:'5573991110003', maps:'https://maps.app.goo.gl/exemplo3' },
+      { nivel:'avancado',      nome:'Forró Estilizado', professor:'Prof. Marcos Vieira',  horario:'Sex · 20h',              local:'Casa de Shows Maraú',   preco:'R$ 120/mês',  whatsapp:'5573991110004', maps:'https://maps.app.goo.gl/exemplo4' },
     ]
   };
 
@@ -301,7 +301,10 @@
         </div>
         <div class="card-footer aula-footer">
           <p class="aula-preco">${a.preco}</p>
-          ${a.whatsapp ? `<a class="card-link link-wa" href="https://wa.me/${a.whatsapp}?text=Olá! Vi o site Forró Barra Grande e tenho interesse na aula ${encodeURIComponent(a.nome)}" target="_blank" rel="noopener" aria-label="WhatsApp">${svgWA} Falar</a>` : ''}
+          <div class="card-links">
+            ${a.whatsapp ? `<a class="card-link link-wa" href="https://wa.me/${a.whatsapp}?text=Olá! Vi o site Forró Barra Grande e tenho interesse na aula ${encodeURIComponent(a.nome)}" target="_blank" rel="noopener" aria-label="WhatsApp">${svgWA} Falar</a>` : ''}
+            ${a.maps ? `<a class="card-link link-maps" href="${a.maps}" target="_blank" rel="noopener" aria-label="Ver no mapa">${svgMaps}</a>` : ''}
+          </div>
         </div>
       </article>`).join('');
   }
@@ -340,7 +343,7 @@
       const auRows = await parseSheet(resAu);
       renderAulas(auRows.filter(r => r[1]).map(r => ({
         nivel: r[0], nome: r[1], professor: r[2], horario: r[3], local: r[4],
-        preco: r[5], whatsapp: r[6] || ''
+        preco: r[5], whatsapp: r[6] || '', maps: r[7] || ''
       })));
 
     } catch (err) {
