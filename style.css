@@ -77,16 +77,7 @@ nav {
   line-height: 1;
 }
 
-/* ========== BANNER ADMIN ========== */
-.admin-banner {
-  background: var(--amarelo);
-  padding: 0.55rem 1.5rem;
-  text-align: center;
-  border-bottom: 1px solid #e8941a;
-}
-.admin-banner p   { font-size: 0.82rem; color: var(--laranja-escuro); font-weight: 500; }
-.admin-banner strong { color: var(--texto); }
-.admin-banner a   { color: var(--vermelho); font-weight: 700; text-decoration: underline; }
+
 
 /* ========== HERO ========== */
 .hero {
@@ -451,4 +442,15 @@ footer a:hover { color: var(--amarelo); }
 .link-wa svg {
   width: 15px;
   height: 15px;
+}
+
+/* Link de Maps no local da aula */
+.aula-maps-link {
+  color: var(--laranja-escuro);
+  text-decoration: underline dotted;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.aula-maps-link:hover {
+  color: var(--laranja);
 }
